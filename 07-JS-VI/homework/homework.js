@@ -4,13 +4,13 @@ function mayuscula(nombre) {
   //La función recibe un nombre y debe devolver el mismo que recibe pero con su primer letra en mayúscula
   //ej: Recibe "mario" ----> Devuelve "Mario"
   //Tu código:
-  return nombre[0].toUppercase() + nombre.slice(1)
+  return nombre[0].toUpperCase() + nombre.slice(1);
 }
 
 function invocarCallback(cb) {
   // Invoca al callback `cb`
   //Tu código:
-  cb()
+  cb();
 }
 
 function operacionMatematica(n1, n2, cb) {
@@ -45,12 +45,10 @@ function map(array, cb) {
   // Itera sobre cada valor en "array", pásalo a `cb` y luego ubicar el valor devuelto por `cb` en un nuevo array
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
-  var nuevoArr = [];
-for (var i = 0; i<array.length; i++){
-  let valor = cb(array[i])
-  nuevoArr.push(cb(array[i]))
-  return nuevoArr
-}
+  var nuevoArray = array.map(function(el) {
+    return cb(el);
+  });
+  return nuevoArray;
 }
 
 function filter(array) {
